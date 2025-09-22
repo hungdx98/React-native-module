@@ -1,5 +1,34 @@
 PODS:
   - boost (1.84.0)
+  - ComponentsKit (0.0.1):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - Yoga
   - DoubleConversion (1.1.6)
   - fast_float (8.0.0)
   - FBLazyVector (0.80.0)
@@ -2122,11 +2151,45 @@ PODS:
     - React-perflogger (= 0.80.0)
     - React-utils (= 0.80.0)
     - SocketRocket
+  - simdjson (3.9.4)
   - SocketRocket (0.7.1)
+  - SQLiteModule (1.0.0):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - Yoga
+  - WatermelonDB (0.28.0):
+    - React
+    - simdjson
   - Yoga (0.0.0)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
+  - "ComponentsKit (from `../node_modules/@coin98-components-kit`)"
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - fast_float (from `../node_modules/react-native/third-party-podspecs/fast_float.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -2198,7 +2261,10 @@ DEPENDENCIES:
   - ReactAppDependencyProvider (from `build/generated/ios`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "simdjson (from `../node_modules/@nozbe/simdjson`)"
   - SocketRocket (~> 0.7.1)
+  - "SQLiteModule (from `../node_modules/@coin98/sqlite-module`)"
+  - "WatermelonDB (from `../node_modules/@nozbe/watermelondb`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -2208,6 +2274,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
+  ComponentsKit:
+    :path: "../node_modules/@coin98-components-kit"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   fast_float:
@@ -2349,11 +2417,18 @@ EXTERNAL SOURCES:
     :path: build/generated/ios
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  simdjson:
+    :path: "../node_modules/@nozbe/simdjson"
+  SQLiteModule:
+    :path: "../node_modules/@coin98/sqlite-module"
+  WatermelonDB:
+    :path: "../node_modules/@nozbe/watermelondb"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   boost: 7e761d76ca2ce687f7cc98e698152abd03a18f90
+  ComponentsKit: 1db1b57bb606b73b0d31b97877f189f4fb3751ce
   DoubleConversion: cb417026b2400c8f53ae97020b2be961b59470cb
   fast_float: b32c788ed9c6a8c584d114d0047beda9664e7cc6
   FBLazyVector: 778b815a6fb3fa1599f581ffb9a5e85fad313c1d
@@ -2399,14 +2474,14 @@ SPEC CHECKSUMS:
   React-performancetimeline: a81afec7aba50bdb80e5a692b03eff2dc499fe37
   React-RCTActionSheet: 99864bd8422649219f24eca9a51445e698b70b8e
   React-RCTAnimation: 7cb99a851a514673a1e48ca5fcbdee7c7c760da1
-  React-RCTAppDelegate: 96f3e9b57518a28053e13e61b38e84f8c5735ddc
+  React-RCTAppDelegate: cd3bc49cec7cef167e920d5e54194d161cd8ab6d
   React-RCTBlob: c96068eb67bf4a587f279db91c6948fc761826b9
-  React-RCTFabric: 5083dbf43aec327f6feee050117dd43f469c8e12
-  React-RCTFBReactNativeSpec: 7fcc2e9f7a2da3dc840edfb6e058288f8c8a4932
+  React-RCTFabric: ca43b2e7bf026a8898a4eea81e9306786a892065
+  React-RCTFBReactNativeSpec: 96df6e569ad40c52f286762a59d7a96644567f5b
   React-RCTImage: c40e65f565882df880c4f8994940c8b070923239
   React-RCTLinking: 88992a3fb7c8caa868a2fc3489b26741e75ac5b5
   React-RCTNetwork: 89c9222b388d90229511cc974abee608ac9c1221
-  React-RCTRuntime: d0b738323fd15ec2013088f9c960ff526d749493
+  React-RCTRuntime: 8a0222f21dacd0946aaff43976a06bd082e49e42
   React-RCTSettings: 9e7a5f4262523dee5a1f9b0fd1e674b2a11bd7db
   React-RCTText: 67f2955faca189ff85c3c5686505be9526df5461
   React-RCTVibration: e4fe5861cee22c972672d29da4cdf24b6313e01d
@@ -2422,11 +2497,14 @@ SPEC CHECKSUMS:
   React-timing: a275a1c2e6112dba17f8f7dd496d439213bbea0d
   React-utils: 257f8c08cb0559e458a9a9254967058434198ced
   ReactAppDependencyProvider: cd55f820247d424280ae0b94e1ffb38963410c01
-  ReactCodegen: 304f881dea867b659e4ba479608ec06f8117e0c5
+  ReactCodegen: 604992d9b696307b5feae10ecf6a401cb5da92e6
   ReactCommon: 658874decaf8c4fd76cfa3a878b94a869db85b1c
+  simdjson: 7bb9e33d87737cec966e7b427773c67baa4458fe
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
-  Yoga: 395b5d614cd7cbbfd76b05d01bd67230a6ad004e
+  SQLiteModule: 014c08b1dc8ba5468474d164fcc6f55cf72dcfc8
+  WatermelonDB: 8dafe8b8a23dc6d8e033e1086449b8e2638d9453
+  Yoga: 0c4b7d2aacc910a1f702694fa86be830386f4ceb
 
-PODFILE CHECKSUM: 27725f514c2c45c569a1570bf595433d9f2c9e6f
+PODFILE CHECKSUM: 9118194668abfe451eef762966e3019fb11dfc60
 
 COCOAPODS: 1.15.2

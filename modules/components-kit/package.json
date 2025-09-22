@@ -1,0 +1,20 @@
+{
+  "name": "coin98-components-kit",
+  "version": "0.0.1",
+  "description": "'",
+  "main": "src/index",
+  "types": "src/index.ts",
+  "codegenConfig": {
+    "name": "ComponentsKitSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
+  },
+  "author": " <> ()",
+  "license": "UNLICENSED",
+  "homepage": "#readme",
+  "create-react-native-library": {
+    "languages": "kotlin-objc",
+    "type": "turbo-module",
+    "version": "0.54.3"
+  }
+}

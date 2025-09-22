@@ -1,0 +1,29 @@
+{
+  "name": "@coin98/sqlite-module",
+  "version": "1.0.0",
+  "description": "TurboModule for SQLite database operations",
+  "main": "index.ts",
+  "types": "index.ts",
+  "homepage": "#readme",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": ["react-native", "turbomodule", "sqlite"],
+  "author": "LawK",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-native": "^0.70.0"
+  },
+  "codegenConfig": {
+    "name": "SQLiteModuleSpecs",
+    "type": "modules",
+    "jsSrcsDir": "src"
+  }
+}
