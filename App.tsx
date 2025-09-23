@@ -11,6 +11,7 @@ import { DatabaseProvider } from '@nozbe/watermelondb/react'
 import { database } from './configuration';
 // import PostsList from './screens/Post';
 import WatermelonDBReader from './screens/Post/WatermelonDBReader';
+import VariableModuleDemo from './components/VariableModuleDemo';
 
 function App() {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -27,7 +28,8 @@ function App() {
             console.log(event.nativeEvent.message); // "pressed"
           }} /> */}
           {/* <PostsList /> */}
-          <WatermelonDBReader />
+          {/* <WatermelonDBReader /> */}
+          <VariableModuleDemo />
       </View>
     </DatabaseProvider>
   );

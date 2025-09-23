@@ -12,6 +12,8 @@
   "dependencies": {
     "@coin98-components-kit": "file:./modules/components-kit",
     "@coin98/sqlite-module": "file:./modules/sqlite-module",
+    "@coin98/variable-storage-module": "file:./modules/variable-storage-module",
+    "@coin98/variable-reader-module": "file:./modules/variable-reader-module",
     "@nozbe/simdjson": "^3.9.4",
     "@nozbe/watermelondb": "^0.28.0",
     "@nozbe/with-observables": "^1.6.0",

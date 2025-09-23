@@ -1,0 +1,29 @@
+{
+  "name": "@coin98/variable-reader-module",
+  "version": "1.0.0",
+  "description": "TurboModule for reading variables from VariableStorageModule",
+  "main": "index.ts",
+  "types": "index.ts",
+  "homepage": "#readme",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": ["react-native", "turbomodule", "variable-reader"],
+  "author": "LawK",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-native": "^0.70.0"
+  },
+  "codegenConfig": {
+    "name": "VariableReaderModuleSpecs",
+    "type": "modules",
+    "jsSrcsDir": "src"
+  }
+}

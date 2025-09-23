@@ -11,6 +11,12 @@ dependencies:
   '@coin98/sqlite-module':
     specifier: file:./modules/sqlite-module
     version: file:modules/sqlite-module(react-native@0.80.0)(react@19.1.0)
+  '@coin98/variable-reader-module':
+    specifier: file:./modules/variable-reader-module
+    version: file:modules/variable-reader-module(react-native@0.80.0)(react@19.1.0)
+  '@coin98/variable-storage-module':
+    specifier: file:./modules/variable-storage-module
+    version: file:modules/variable-storage-module(react-native@0.80.0)(react@19.1.0)
   '@nozbe/simdjson':
     specifier: ^3.9.4
     version: 3.9.4
@@ -6841,6 +6847,30 @@ packages:
     resolution: {directory: modules/sqlite-module, type: directory}
     id: file:modules/sqlite-module
     name: '@coin98/sqlite-module'
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+    dependencies:
+      react: 19.1.0
+      react-native: 0.80.0(@babel/core@7.28.4)(@react-native-community/cli@19.0.0)(@types/react@19.1.13)(react@19.1.0)
+    dev: false
+
+  file:modules/variable-reader-module(react-native@0.80.0)(react@19.1.0):
+    resolution: {directory: modules/variable-reader-module, type: directory}
+    id: file:modules/variable-reader-module
+    name: '@coin98/variable-reader-module'
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+    dependencies:
+      react: 19.1.0
+      react-native: 0.80.0(@babel/core@7.28.4)(@react-native-community/cli@19.0.0)(@types/react@19.1.13)(react@19.1.0)
+    dev: false
+
+  file:modules/variable-storage-module(react-native@0.80.0)(react@19.1.0):
+    resolution: {directory: modules/variable-storage-module, type: directory}
+    id: file:modules/variable-storage-module
+    name: '@coin98/variable-storage-module'
     peerDependencies:
       react: '*'
       react-native: '*'

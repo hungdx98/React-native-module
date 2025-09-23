@@ -2182,6 +2182,65 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
+  - VariableReaderModule (1.0.0):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - VariableStorageModule
+    - Yoga
+  - VariableStorageModule (1.0.0):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - Yoga
   - WatermelonDB (0.28.0):
     - React
     - simdjson
@@ -2264,6 +2323,8 @@ DEPENDENCIES:
   - "simdjson (from `../node_modules/@nozbe/simdjson`)"
   - SocketRocket (~> 0.7.1)
   - "SQLiteModule (from `../node_modules/@coin98/sqlite-module`)"
+  - "VariableReaderModule (from `../node_modules/@coin98/variable-reader-module`)"
+  - "VariableStorageModule (from `../node_modules/@coin98/variable-storage-module`)"
   - "WatermelonDB (from `../node_modules/@nozbe/watermelondb`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -2421,6 +2482,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@nozbe/simdjson"
   SQLiteModule:
     :path: "../node_modules/@coin98/sqlite-module"
+  VariableReaderModule:
+    :path: "../node_modules/@coin98/variable-reader-module"
+  VariableStorageModule:
+    :path: "../node_modules/@coin98/variable-storage-module"
   WatermelonDB:
     :path: "../node_modules/@nozbe/watermelondb"
   Yoga:
@@ -2502,6 +2567,8 @@ SPEC CHECKSUMS:
   simdjson: 7bb9e33d87737cec966e7b427773c67baa4458fe
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   SQLiteModule: 014c08b1dc8ba5468474d164fcc6f55cf72dcfc8
+  VariableReaderModule: b975b330096f6f43bfce06417c930bfecdb48cd6
+  VariableStorageModule: ffc75d1e0388712fe37ddb2497fbaa8f58614a62
   WatermelonDB: 8dafe8b8a23dc6d8e033e1086449b8e2638d9453
   Yoga: 0c4b7d2aacc910a1f702694fa86be830386f4ceb
 
