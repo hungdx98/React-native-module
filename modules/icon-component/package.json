@@ -1,0 +1,28 @@
+{
+  "name": "@coin98/icon-component",
+  "version": "1.0.0",
+  "description": "Fabric Component for rendering icomoon icons",
+  "main": "src/index.ts",
+  "homepage": "https://github.com/coin98/icon-component",
+  "license": "MIT",
+  "author": "Coin98 Team",
+  "keywords": [
+    "react-native",
+    "fabric",
+    "component",
+    "icons",
+    "icomoon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coin98/icon-component.git"
+  },
+  "codegenConfig": {
+    "name": "IconComponentSpecs",
+    "type": "components",
+    "jsSrcsDir": "src"
+  },
+  "dependencies": {
+    "@coin98/icon-storage-module": "file:../icon-storage-module"
+  }
+}

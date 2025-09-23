@@ -12,6 +12,8 @@ import { database } from './configuration';
 // import PostsList from './screens/Post';
 import WatermelonDBReader from './screens/Post/WatermelonDBReader';
 import VariableModuleDemo from './components/VariableModuleDemo';
+import IconSystemDemo from './components/IconSystemDemo';
+import IconSystemDemoSimple from './components/IconSystemDemoSimple';
 
 function App() {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -29,7 +31,9 @@ function App() {
           }} /> */}
           {/* <PostsList /> */}
           {/* <WatermelonDBReader /> */}
-          <VariableModuleDemo />
+          {/* <VariableModuleDemo /> */}
+          {/* <IconSystemDemo /> */}
+          <IconSystemDemoSimple />
       </View>
     </DatabaseProvider>
   );
@@ -39,7 +43,7 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 50,
+    paddingTop: 50,
     backgroundColor: 'white',
   },
   buttonCustom: {

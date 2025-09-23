@@ -8,6 +8,12 @@ dependencies:
   '@coin98-components-kit':
     specifier: file:./modules/components-kit
     version: file:modules/components-kit
+  '@coin98/icon-component':
+    specifier: file:./modules/icon-component
+    version: file:modules/icon-component
+  '@coin98/icon-storage-module':
+    specifier: file:./modules/icon-storage-module
+    version: file:modules/icon-storage-module
   '@coin98/sqlite-module':
     specifier: file:./modules/sqlite-module
     version: file:modules/sqlite-module(react-native@0.80.0)(react@19.1.0)
@@ -6841,6 +6847,18 @@ packages:
   file:modules/components-kit:
     resolution: {directory: modules/components-kit, type: directory}
     name: coin98-components-kit
+    dev: false
+
+  file:modules/icon-component:
+    resolution: {directory: modules/icon-component, type: directory}
+    name: '@coin98/icon-component'
+    dependencies:
+      '@coin98/icon-storage-module': file:modules/icon-storage-module
+    dev: false
+
+  file:modules/icon-storage-module:
+    resolution: {directory: modules/icon-storage-module, type: directory}
+    name: '@coin98/icon-storage-module'
     dev: false
 
   file:modules/sqlite-module(react-native@0.80.0)(react@19.1.0):
