@@ -3,7 +3,7 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-  s.name         = "ComponentsKit"
+  s.name         = "CustomButtonFabric"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
@@ -16,6 +16,11 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
   s.private_header_files = "ios/**/*.h"
   
+  # Dependencies
+  s.dependency "React-Core"
+  s.dependency "React-RCTFabric"
+  s.dependency "CustomButton"  # This will link to our CustomButton component
+
   s.swift_version = "5.0"
 
   install_modules_dependencies(s)

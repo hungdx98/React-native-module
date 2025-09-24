@@ -1,0 +1,27 @@
+{
+  "name": "@coin98/custom-button-fabric",
+  "version": "0.0.1",
+  "description": "A Fabric component that uses CustomButton from components-kit",
+  "main": "src/index",
+  "types": "src/index.ts",
+  "codegenConfig": {
+    "name": "CustomButtonFabricSpec",
+    "type": "components",
+    "jsSrcsDir": "src"
+  },
+  "dependencies": {
+    "@coin98/custom-button-component": "file:../components-kit"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "author": "Developer",
+  "license": "MIT",
+  "homepage": "#readme",
+  "create-react-native-library": {
+    "languages": "kotlin-objc",
+    "type": "components",
+    "version": "0.54.3"
+  }
+}

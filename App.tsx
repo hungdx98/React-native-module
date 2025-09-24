@@ -5,14 +5,15 @@
  * @format
  */
 
-import CustomButton from '@coin98-components-kit';
+import CustomButton from '@coin98/custom-button-component';
+import CustomButtonContainer from '@coin98/custom-button-fabric';
 import { StyleSheet, useColorScheme, View } from 'react-native';
 import { DatabaseProvider } from '@nozbe/watermelondb/react'
 import { database } from './configuration';
 // import PostsList from './screens/Post';
 import WatermelonDBReader from './screens/Post/WatermelonDBReader';
 import VariableModuleDemo from './components/VariableModuleDemo';
-import IconSystemDemo from './components/IconSystemDemo';
+// import IconSystemDemo from './components/IconSystemDemo';
 import IconSystemDemoSimple from './components/IconSystemDemoSimple';
 
 function App() {
@@ -22,18 +23,29 @@ function App() {
     <DatabaseProvider database={database}>
       <View style={styles.container}>
         {/* <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} /> */}
-        {/* <CustomButton
+        <CustomButton
           style={styles.buttonCustom}
           title="Click me"
-          // backgroundColorHex="#00ff6aff"
-          onPress={(event) => {
-            console.log(event.nativeEvent.message); // "pressed"
-          }} /> */}
+          onPress={() => {
+            console.log("hehehehehe"); // "pressed"
+          }} />
+        
+        <CustomButtonContainer
+          style={styles.containerFabric}
+          buttonTitle1="First Action"
+          buttonTitle2="Second Action"
+          buttonColor1="#007AFF"
+          buttonColor2="#FF3B30"
+          onButtonPress={(buttonIndex, message) => {
+            console.log(`Fabric Button ${buttonIndex}: ${message}`);
+          }}
+        />
+        
           {/* <PostsList /> */}
           {/* <WatermelonDBReader /> */}
           {/* <VariableModuleDemo /> */}
           {/* <IconSystemDemo /> */}
-          <IconSystemDemoSimple />
+          {/* <IconSystemDemoSimple /> */}
       </View>
     </DatabaseProvider>
   );
@@ -50,7 +62,14 @@ const styles = StyleSheet.create({
     width: 200,
     height: 50,
     color: 'black',
-    backgroundColor: 'blue',
+    backgroundColor: 'black',
+  },
+  containerFabric: {
+    marginTop: 20,
+    marginHorizontal: 20,
+    height: 100,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 8,
   },
 });
 
