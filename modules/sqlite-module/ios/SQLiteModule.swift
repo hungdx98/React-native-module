@@ -265,7 +265,7 @@ class SQLiteModule: NSObject, RCTBridgeModule {
                 case SQLITE_FLOAT:
                     value = sqlite3_column_double(statement, i)
                 case SQLITE_TEXT:
-                    if let text = sqlite3_column_text(statement, i) {
+                    if let text: UnsafePointer<UInt8> = sqlite3_column_text(statement, i) {
                         value = String(cString: text)
                     } else {
                         value = ""
