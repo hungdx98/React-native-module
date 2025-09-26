@@ -126,6 +126,67 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
+  - lottie-ios (4.4.1)
+  - lottie-react-native (6.7.2):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - lottie-ios (= 4.4.1)
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - Yoga
+  - LottieAnimationModule (1.0.0):
+    - boost
+    - DoubleConversion
+    - fast_float
+    - fmt
+    - glog
+    - hermes-engine
+    - lottie-react-native
+    - RCT-Folly
+    - RCT-Folly/Fabric
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-hermes
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-renderercss
+    - React-rendererdebug
+    - React-utils
+    - ReactCodegen
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - SocketRocket
+    - Yoga
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -2347,6 +2408,8 @@ DEPENDENCIES:
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - "IconComponent (from `../node_modules/@coin98/icon-component`)"
   - "IconStorageModule (from `../node_modules/@coin98/icon-storage-module`)"
+  - lottie-react-native (from `../node_modules/lottie-react-native`)
+  - "LottieAnimationModule (from `../node_modules/@coin98/lottie-animation-module`)"
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
   - RCTRequired (from `../node_modules/react-native/Libraries/Required`)
@@ -2422,6 +2485,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - lottie-ios
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -2448,6 +2512,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@coin98/icon-component"
   IconStorageModule:
     :path: "../node_modules/@coin98/icon-storage-module"
+  lottie-react-native:
+    :path: "../node_modules/lottie-react-native"
+  LottieAnimationModule:
+    :path: "../node_modules/@coin98/lottie-animation-module"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTDeprecation:
@@ -2601,6 +2669,9 @@ SPEC CHECKSUMS:
   hermes-engine: 7068e976238b29e97b3bafd09a994542af7d5c0b
   IconComponent: c5a4399f532ea7267a4e4b3693ae4d87c65ca0ef
   IconStorageModule: 574b158ef740a7235eddb330a0f312226f93ba53
+  lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
+  lottie-react-native: 7a748a76c62d81fd500eb0c5278e092dea94efc3
+  LottieAnimationModule: b50fb3ecbd2195eb3b0e46040388b3ff7627f4f2
   RCT-Folly: 59ec0ac1f2f39672a0c6e6cecdd39383b764646f
   RCTDeprecation: ff787f6c860a1b97dd1bc27264b61d23ad1994da
   RCTRequired: 664eb8399ed8a83e26ab65af7c2ad390f7e61696

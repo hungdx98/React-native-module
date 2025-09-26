@@ -1,0 +1,27 @@
+{
+  "name": "@coin98/lottie-animation-module",
+  "version": "1.0.0",
+  "description": "A React Native TurboModule for Lottie animations",
+  "main": "index.ts",
+  "homepage": "#homepage",
+  "summary": "A React Native TurboModule for Lottie animations",
+  "license": "MIT",
+  "author": "Coin98 Team",
+  "keywords": [
+    "react-native",
+    "turbomodule",
+    "lottie"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "codegenConfig": {
+    "name": "LottieAnimationModuleSpecs",
+    "type": "components",
+    "jsSrcsDir": "src"
+  },
+  "dependencies": {
+    "lottie-react-native": "7.3.4"
+  }
+}

@@ -7,23 +7,24 @@
 
 import CustomButton from '@coin98/custom-button-component';
 import CustomButtonContainer from '@coin98/custom-button-fabric';
-import { StyleSheet, useColorScheme, View } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { DatabaseProvider } from '@nozbe/watermelondb/react'
 import { database } from './configuration';
 // import PostsList from './screens/Post';
-import WatermelonDBReader from './screens/Post/WatermelonDBReader';
-import VariableModuleDemo from './components/VariableModuleDemo';
+// import WatermelonDBReader from './screens/Post/WatermelonDBReader';
+// import VariableModuleDemo from './components/VariableModuleDemo';
 // import IconSystemDemo from './components/IconSystemDemo';
-import IconSystemDemoSimple from './components/IconSystemDemoSimple';
+// import IconSystemDemoSimple from './components/IconSystemDemoSimple';
+import LottieAnimationDemo from './components/LottieAnimationDemo';
 
 function App() {
   // const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <DatabaseProvider database={database}>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         {/* <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} /> */}
-        <CustomButton
+        {/* <CustomButton
           style={styles.buttonCustom}
           title="Click me"
           onPress={() => {
@@ -39,14 +40,16 @@ function App() {
           onButtonPress={(buttonIndex, message) => {
             console.log(`Fabric Button ${buttonIndex}: ${message}`);
           }}
-        />
+        /> */}
+        
+        <LottieAnimationDemo />
         
           {/* <PostsList /> */}
           {/* <WatermelonDBReader /> */}
           {/* <VariableModuleDemo /> */}
           {/* <IconSystemDemo /> */}
           {/* <IconSystemDemoSimple /> */}
-      </View>
+      </ScrollView>
     </DatabaseProvider>
   );
 }

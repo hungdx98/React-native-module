@@ -17,10 +17,12 @@
     "@coin98/sqlite-module": "file:./modules/sqlite-module",
     "@coin98/variable-reader-module": "file:./modules/variable-reader-module",
     "@coin98/variable-storage-module": "file:./modules/variable-storage-module",
+    "@coin98/lottie-animation-module": "file:./modules/lottie-animation-module",
     "@nozbe/simdjson": "^3.9.4",
     "@nozbe/watermelondb": "^0.28.0",
     "@nozbe/with-observables": "^1.6.0",
     "@react-native/new-app-screen": "0.80.0",
+    "lottie-react-native": "^6.7.0",
     "react": "19.1.0",
     "react-native": "0.80.0"
   },

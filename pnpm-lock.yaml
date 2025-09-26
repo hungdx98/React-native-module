@@ -17,6 +17,9 @@ dependencies:
   '@coin98/icon-storage-module':
     specifier: file:./modules/icon-storage-module
     version: file:modules/icon-storage-module
+  '@coin98/lottie-animation-module':
+    specifier: file:./modules/lottie-animation-module
+    version: file:modules/lottie-animation-module(react-native@0.80.0)(react@19.1.0)
   '@coin98/sqlite-module':
     specifier: file:./modules/sqlite-module
     version: file:modules/sqlite-module(react-native@0.80.0)(react@19.1.0)
@@ -38,6 +41,9 @@ dependencies:
   '@react-native/new-app-screen':
     specifier: 0.80.0
     version: 0.80.0(@types/react@19.1.13)(react-native@0.80.0)(react@19.1.0)
+  lottie-react-native:
+    specifier: ^6.7.0
+    version: 6.7.2(react-native@0.80.0)(react@19.1.0)
   react:
     specifier: 19.1.0
     version: 19.1.0
@@ -5128,6 +5134,43 @@ packages:
     dependencies:
       js-tokens: 4.0.0
 
+  /lottie-react-native@6.7.2(react-native@0.80.0)(react@19.1.0):
+    resolution: {integrity: sha512-MZVx6N1EeO/EaSx8T44mJ0aHc5Mqee+xIfWwszni0oz8U2wlHdaWGjES44dHxaxgAp/0dRaFt3PkpZ6egTzcBg==}
+    peerDependencies:
+      '@dotlottie/react-player': ^1.6.1
+      '@lottiefiles/react-lottie-player': ^3.5.3
+      react: '*'
+      react-native: '>=0.46'
+      react-native-windows: '>=0.63.x'
+    peerDependenciesMeta:
+      '@dotlottie/react-player':
+        optional: true
+      '@lottiefiles/react-lottie-player':
+        optional: true
+      react-native-windows:
+        optional: true
+    dependencies:
+      react: 19.1.0
+      react-native: 0.80.0(@babel/core@7.28.4)(@react-native-community/cli@19.0.0)(@types/react@19.1.13)(react@19.1.0)
+    dev: false
+
+  /lottie-react-native@7.3.4(react-native@0.80.0)(react@19.1.0):
+    resolution: {integrity: sha512-XUh7eGFb7ID8JRdU6U4N4cYQeYmjtdQRvd8ZXJ6xrdSsn5gZD0c79ITOREPcwJg4YupBFHgyV1GXdAHQP+KYUQ==}
+    peerDependencies:
+      '@lottiefiles/dotlottie-react': ^0.13.5
+      react: '*'
+      react-native: '>=0.46'
+      react-native-windows: '>=0.63.x'
+    peerDependenciesMeta:
+      '@lottiefiles/dotlottie-react':
+        optional: true
+      react-native-windows:
+        optional: true
+    dependencies:
+      react: 19.1.0
+      react-native: 0.80.0(@babel/core@7.28.4)(@react-native-community/cli@19.0.0)(@types/react@19.1.13)(react@19.1.0)
+    dev: false
+
   /lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
     dependencies:
@@ -6869,6 +6912,19 @@ packages:
   file:modules/icon-storage-module:
     resolution: {directory: modules/icon-storage-module, type: directory}
     name: '@coin98/icon-storage-module'
+    dev: false
+
+  file:modules/lottie-animation-module(react-native@0.80.0)(react@19.1.0):
+    resolution: {directory: modules/lottie-animation-module, type: directory}
+    id: file:modules/lottie-animation-module
+    name: '@coin98/lottie-animation-module'
+    dependencies:
+      lottie-react-native: 7.3.4(react-native@0.80.0)(react@19.1.0)
+    transitivePeerDependencies:
+      - '@lottiefiles/dotlottie-react'
+      - react
+      - react-native
+      - react-native-windows
     dev: false
 
   file:modules/sqlite-module(react-native@0.80.0)(react@19.1.0):
