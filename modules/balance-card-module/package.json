@@ -1,0 +1,15 @@
+{
+  "name": "@coin98/balance-card-module",
+  "version": "0.0.1",
+  "description": "'",
+  "main": "src/index",
+  "types": "src/index.ts",
+  "codegenConfig": {
+    "name": "BalanceCardSpec",
+    "type": "components",
+    "jsSrcsDir": "src"
+  },
+  "author": " <> ()",
+  "license": "UNLICENSED",
+  "homepage": "#readme"
+}

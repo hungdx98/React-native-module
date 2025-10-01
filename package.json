@@ -18,6 +18,7 @@
     "@coin98/variable-reader-module": "file:./modules/variable-reader-module",
     "@coin98/variable-storage-module": "file:./modules/variable-storage-module",
     "@coin98/lottie-animation-module": "file:./modules/lottie-animation-module",
+    "@coin98/balance-card-module": "file:./modules/balance-card-module",
     "@nozbe/simdjson": "^3.9.4",
     "@nozbe/watermelondb": "^0.28.0",
     "@nozbe/with-observables": "^1.6.0",

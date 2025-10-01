@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@coin98/balance-card-module':
+    specifier: file:./modules/balance-card-module
+    version: file:modules/balance-card-module
   '@coin98/custom-button-component':
     specifier: file:./modules/components-kit
     version: file:modules/components-kit
@@ -6883,6 +6886,11 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  file:modules/balance-card-module:
+    resolution: {directory: modules/balance-card-module, type: directory}
+    name: '@coin98/balance-card-module'
+    dev: false
 
   file:modules/components-kit:
     resolution: {directory: modules/components-kit, type: directory}
