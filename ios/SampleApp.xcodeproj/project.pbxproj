@@ -515,6 +515,10 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"-Wno-nullability-completeness",
+				);
 			};
 			name = Debug;
 		};
@@ -541,6 +545,10 @@
 				PRODUCT_NAME = SampleApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"-Wno-nullability-completeness",
+				);
 			};
 			name = Release;
 		};

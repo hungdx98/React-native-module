@@ -9,7 +9,7 @@ import {
   Alert,
 } from 'react-native';
 import IconStorageModule from '@coin98/icon-storage-module';
-import IconComponent from '../modules/icon-component/src/IconComponent';
+import IconComponent from '@coin98/icon-component';
 
 const IconSystemDemo: React.FC = () => {
   const [iconName, setIconName] = useState('cloudkit');

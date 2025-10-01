@@ -37,8 +37,8 @@ extension UIColor {
     }
 }
 
-@objc(BalanceCardView)
-class BalanceCardView: UIView {
+@objc(PreviewBalanceCardView)
+class PreviewBalanceCardView: UIView {
   
   @objc var balance: NSString = "" {
     didSet {
@@ -147,15 +147,15 @@ class BalanceCardView: UIView {
   }
 }
 
-// Wrap BalanceCardView để SwiftUI có thể render
+// Wrap PreviewBalanceCardView để SwiftUI có thể render
 struct BalanceCardPreview: UIViewRepresentable {
-    func makeUIView(context: Context) -> BalanceCardView {
-        let view = BalanceCardView()
+    func makeUIView(context: Context) -> PreviewBalanceCardView {
+        let view = PreviewBalanceCardView()
         view.balance = "$12"
         return view
     }
     
-    func updateUIView(_ uiView: BalanceCardView, context: Context) {
+    func updateUIView(_ uiView: PreviewBalanceCardView, context: Context) {
         // có thể update props nếu cần
 //        uiView.balance = "222"
     }

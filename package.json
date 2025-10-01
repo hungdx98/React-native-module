@@ -10,8 +10,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@coin98/custom-button-component": "file:./modules/components-kit",
-    "@coin98/custom-button-fabric": "file:modules/custom-button-fabric",
     "@coin98/icon-component": "file:./modules/icon-component",
     "@coin98/icon-storage-module": "file:./modules/icon-storage-module",
     "@coin98/sqlite-module": "file:./modules/sqlite-module",

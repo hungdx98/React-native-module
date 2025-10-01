@@ -6,7 +6,6 @@
  */
 
 // import CustomButton from '@coin98/custom-button-component';
-// import CustomButtonContainer from '@coin98/custom-button-fabric';
 import { StyleSheet, ScrollView } from 'react-native';
 import { DatabaseProvider } from '@nozbe/watermelondb/react'
 import { database } from './configuration';
