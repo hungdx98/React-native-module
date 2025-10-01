@@ -5,17 +5,17 @@
  * @format
  */
 
-import CustomButton from '@coin98/custom-button-component';
-import CustomButtonContainer from '@coin98/custom-button-fabric';
+// import CustomButton from '@coin98/custom-button-component';
+// import CustomButtonContainer from '@coin98/custom-button-fabric';
 import { StyleSheet, ScrollView } from 'react-native';
 import { DatabaseProvider } from '@nozbe/watermelondb/react'
 import { database } from './configuration';
 // import PostsList from './screens/Post';
 // import WatermelonDBReader from './screens/Post/WatermelonDBReader';
 // import VariableModuleDemo from './components/VariableModuleDemo';
-// import IconSystemDemo from './components/IconSystemDemo';
+import IconSystemDemo from './components/IconSystemDemoSimple';
 // import IconSystemDemoSimple from './components/IconSystemDemoSimple';
-import LottieAnimationDemo from './components/LottieAnimationDemo';
+// import LottieAnimationDemo from './components/LottieAnimationDemo';
 
 function App() {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -42,12 +42,12 @@ function App() {
           }}
         /> */}
         
-        <LottieAnimationDemo />
+        {/* <LottieAnimationDemo /> */}
         
           {/* <PostsList /> */}
           {/* <WatermelonDBReader /> */}
           {/* <VariableModuleDemo /> */}
-          {/* <IconSystemDemo /> */}
+          <IconSystemDemo />
           {/* <IconSystemDemoSimple /> */}
       </ScrollView>
     </DatabaseProvider>

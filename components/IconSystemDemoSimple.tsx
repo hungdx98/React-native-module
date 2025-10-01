@@ -9,10 +9,10 @@ import {
   Alert,
 } from 'react-native';
 import IconStorageModule from '@coin98/icon-storage-module';
-import { Icon } from '@coin98/icon-component';
+import IconComponent from '../modules/icon-component/src/IconComponent';
 
 const IconSystemDemo: React.FC = () => {
-  const [iconName, setIconName] = useState('home');
+  const [iconName, setIconName] = useState('cloudkit');
   const [iconSize, setIconSize] = useState(24);
   const [iconColor, setIconColor] = useState('#007AFF');
   const [storedProps, setStoredProps] = useState<any>(null);
@@ -23,7 +23,7 @@ const IconSystemDemo: React.FC = () => {
         name: iconName,
         size: iconSize,
         color: iconColor,
-        unicode: 'e900', // Sample unicode for home icon
+        unicode: 'ec3b', // Unicode for cloudkit icon
         fontFamily: 'icomoon'
       };
       
@@ -127,11 +127,10 @@ const IconSystemDemo: React.FC = () => {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Icon Preview</Text>
         <View style={styles.iconPreview}>
-          <Icon
-            name={iconName}
+          <IconComponent
+            iconName={iconName}
             size={iconSize}
             color={iconColor}
-            fallbackText="📱"
           />
           <Text style={styles.iconLabel}>
             {iconName} ({iconSize}px)
@@ -143,17 +142,16 @@ const IconSystemDemo: React.FC = () => {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Sample Icons</Text>
         <View style={styles.iconGrid}>
-          {['home', 'user', 'search', 'heart', 'star'].map((name) => (
+          {['cloudkit', 'lds-ic-check', 'lds-ic-email', 'lds-ic-edit', 'lds-ic-send'].map((name) => (
             <TouchableOpacity
               key={name}
               style={styles.iconItem}
               onPress={() => setIconName(name)}
             >
-              <Icon
-                name={name}
+              <IconComponent
+                iconName={name}
                 size={32}
                 color="#333"
-                fallbackText="📱"
               />
               <Text style={styles.iconItemText}>{name}</Text>
             </TouchableOpacity>

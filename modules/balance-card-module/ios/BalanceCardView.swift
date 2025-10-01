@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import React
 
 @objc(BalanceCardView)
 class BalanceCardView: UIView {

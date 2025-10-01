@@ -2,6 +2,50 @@ import Foundation
 import UIKit
 import React
 
+// Singleton để lưu icon mappings
+@objc(IconSetManager)
+class IconSetManager: NSObject, RCTBridgeModule {
+    static let shared = IconSetManager()
+    private var iconMappings: [String: Int] = [:]
+    
+    override init() {
+        super.init()
+    }
+    
+    static func moduleName() -> String! {
+        return "IconSetManager"
+    }
+    
+    static func requiresMainQueueSetup() -> Bool {
+        return false
+    }
+    
+    func getIconMappings() -> [String: Int] {
+        return iconMappings
+    }
+    
+    @objc func createIconSetFromIcoMoon(_ selectionJson: NSData) -> String {
+        guard let json = try? JSONSerialization.jsonObject(with: selectionJson as Data) as? [String: Any],
+              let icons = json["icons"] as? [[String: Any]] else {
+            return "Error: Could not load selection.json"
+        }
+        
+        iconMappings.removeAll()
+        
+        for iconData in icons {
+            if let properties = iconData["properties"] as? [String: Any],
+               let name = properties["name"] as? String,
+               let code = properties["code"] as? Int {
+                iconMappings[name] = code
+            }
+        }
+        
+        let message = "Loaded \(iconMappings.count) icons successfully"
+        print(message)
+        return message
+    }
+}
+
 @objc(IconComponentView)
 class IconComponentView: UIView {
     
@@ -14,19 +58,13 @@ class IconComponentView: UIView {
         }
     }
     
-    @objc var iconSet: String = "default" {
-        didSet {
-            updateIcon()
-        }
-    }
-    
     @objc var size: CGFloat = 24 {
         didSet {
             updateSize()
         }
     }
     
-    @objc var color: UIColor? {
+    @objc var color: UIColor = UIColor.black {
         didSet {
             updateColor()
         }
@@ -35,24 +73,6 @@ class IconComponentView: UIView {
     @objc var fontFamily: String = "icomoon" {
         didSet {
             updateFont()
-        }
-    }
-    
-    @objc var unicode: String? {
-        didSet {
-            updateIcon()
-        }
-    }
-    
-    @objc var fallbackText: String? {
-        didSet {
-            updateIcon()
-        }
-    }
-    
-    @objc var showFallback: Bool = false {
-        didSet {
-            updateIcon()
         }
     }
     
@@ -76,6 +96,7 @@ class IconComponentView: UIView {
         updateFont()
         updateSize()
         updateColor()
+        updateIcon()
     }
     
     override func layoutSubviews() {
@@ -87,18 +108,17 @@ class IconComponentView: UIView {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            if self.showFallback {
-                self.iconLabel.text = self.fallbackText ?? "?"
-            } else if let unicode = self.unicode, !unicode.isEmpty {
-                // Convert unicode to character
-                if let unicodeInt = Int(unicode.replacingOccurrences(of: "\\u", with: ""), radix: 16),
-                   let scalar = UnicodeScalar(unicodeInt) {
-                    self.iconLabel.text = String(Character(scalar))
-                } else {
-                    self.iconLabel.text = self.fallbackText ?? "?"
-                }
+            // Lấy icon mappings từ singleton
+            let iconMappings = IconSetManager.shared.getIconMappings()
+            
+            // Tìm icon theo tên trong iconMappings
+            if !self.iconName.isEmpty,
+               let unicodeValue = iconMappings[self.iconName],
+               let scalar = UnicodeScalar(unicodeValue) {
+                self.iconLabel.text = String(Character(scalar))
             } else {
-                self.iconLabel.text = self.fallbackText ?? "?"
+                // Nếu không tìm thấy, hiển thị tên icon hoặc ký tự mặc định
+                self.iconLabel.text = self.iconName.isEmpty ? "?" : "■"
             }
         }
     }
@@ -113,7 +133,7 @@ class IconComponentView: UIView {
     private func updateColor() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.iconLabel.textColor = self.color ?? UIColor.black
+            self.iconLabel.textColor = self.color
         }
     }
     
@@ -129,5 +149,18 @@ class IconComponentView: UIView {
                 self.iconLabel.font = UIFont.systemFont(ofSize: fontSize)
             }
         }
+    }
+}
+
+// Manager class for React Native
+@objc(IconComponentManager)
+class IconComponentManager: RCTViewManager {
+    
+    override func view() -> UIView {
+        return IconComponentView()
+    }
+    
+    override static func requiresMainQueueSetup() -> Bool {
+        return true
     }
 }
