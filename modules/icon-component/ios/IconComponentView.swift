@@ -24,10 +24,10 @@ class IconSetManager: NSObject, RCTBridgeModule {
         return iconMappings
     }
     
-    @objc func createIconSetFromIcoMoon(_ selectionJson: NSData) -> String {
-        guard let json = try? JSONSerialization.jsonObject(with: selectionJson as Data) as? [String: Any],
+    @objc func createIconSetFromIcoMoon(_ selectionJson: NSDictionary) -> String {
+        guard let json = selectionJson as? [String: Any],
               let icons = json["icons"] as? [[String: Any]] else {
-            return "Error: Could not load selection.json"
+            return "Error: Could not load selection.json - invalid format"
         }
         
         iconMappings.removeAll()

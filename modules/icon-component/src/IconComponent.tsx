@@ -13,7 +13,7 @@ interface IconComponentProps {
 const { IconSetManager } = NativeModules;
 IconSetManager.createIconSetFromIcoMoon(selectionPath); // Ensure the icon set is created at module load time
 
-const IconComponentNative = requireNativeComponent<IconComponentProps>('IconComponentView');
+const IconComponentNative = requireNativeComponent<IconComponentProps>('IconComponent');
 
 const IconComponent: React.FC<IconComponentProps> = ({
   iconName,
