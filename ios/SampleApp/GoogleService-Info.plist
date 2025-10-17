@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>897776340259-25d2hipq41tv3o3dt5bnk35jrbjgrfi0.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyArWHWMUQci0IFBDrikYvuXvnPH8xJycsk</string>
+	<key>BUNDLE_ID</key>
+	<string>ramper.multichain.wallet.crypto</string>
+	<key>CLIENT_ID</key>
+	<string>897776340259-6ue8r26p5nfsacm9re5n7baods5fnure.apps.googleusercontent.com</string>
+	<key>GCM_SENDER_ID</key>
+	<string>897776340259</string>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:897776340259:ios:9fc32dd5300ebaa5cfd096</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>PROJECT_ID</key>
+	<string>ramper-prod</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.897776340259-6ue8r26p5nfsacm9re5n7baods5fnure</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ramper-prod.appspot.com</string>
+</dict>
+</plist>

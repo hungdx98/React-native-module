@@ -5,7 +5,7 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-platform :ios, min_ios_version_supported
+platform :ios, '15.1'
 prepare_react_native_project!
 
 linkage = ENV['USE_FRAMEWORKS']
@@ -16,6 +16,9 @@ end
 
 target 'SampleApp' do
   config = use_native_modules!
+  
+  # right after `use_frameworks! :linkage => :static`
+  $RNFirebaseAsStaticFramework = true
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -32,6 +35,13 @@ target 'SampleApp' do
 
   # WatermelonDB dependency
   pod 'simdjson', path: '../node_modules/@nozbe/simdjson', modular_headers: true
+  
+  # Firebase and Google dependencies require modular headers for Swift compatibility
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'GoogleSignIn', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
+  pod 'FirebaseCoreInternal', :modular_headers => true
+  pod 'FirebaseAuth', :modular_headers => true
 
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
@@ -41,5 +51,19 @@ target 'SampleApp' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    
+    # Fix iOS deployment target for all pods
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        # Set minimum iOS deployment target to fix std::get availability
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.1'
+        
+        # Enable modular headers for Google and Firebase pods
+        if target.name.start_with?('Google') || target.name.include?('Firebase')
+          config.build_settings['DEFINES_MODULE'] = 'YES'
+          config.build_settings['SWIFT_INCLUDE_PATHS'] = '$(inherited) $(PODS_CONFIGURATION_BUILD_DIR)'
+        end
+      end
+    end
   end
 end

@@ -10,20 +10,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "@coin98/icon-component": "file:./modules/icon-component",
-    "@coin98/icon-storage-module": "file:./modules/icon-storage-module",
-    "@coin98/sqlite-module": "file:./modules/sqlite-module",
-    "@coin98/variable-reader-module": "file:./modules/variable-reader-module",
-    "@coin98/variable-storage-module": "file:./modules/variable-storage-module",
-    "@coin98/lottie-animation-module": "file:./modules/lottie-animation-module",
-    "@coin98/balance-card-module": "file:./modules/balance-card-module",
     "@nozbe/simdjson": "^3.9.4",
     "@nozbe/watermelondb": "^0.28.0",
     "@nozbe/with-observables": "^1.6.0",
+    "@react-native-firebase/app": "^20.5.0",
+    "@react-native-firebase/auth": "^20.5.0",
+    "@react-native-google-signin/google-signin": "^12.2.1",
     "@react-native/new-app-screen": "0.80.0",
-    "lottie-react-native": "^6.7.0",
+    "axios": "^1.12.2",
+    "lodash": "^4.17.21",
     "react": "19.1.0",
-    "react-native": "0.80.0"
+    "react-native": "0.80.0",
+    "react-native-svg": "^15.14.0",
+    "react-native-webview": "^13.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -38,6 +37,7 @@
     "@react-native/metro-config": "0.80.0",
     "@react-native/typescript-config": "0.80.0",
     "@types/jest": "^29.5.13",
+    "@types/lodash": "^4.17.20",
     "@types/react": "^19.1.0",
     "@types/react-test-renderer": "^19.1.0",
     "eslint": "^8.19.0",
